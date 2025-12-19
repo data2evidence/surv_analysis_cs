@@ -1,0 +1,64 @@
+2025-12-15 13:52:51	[Main thread]	INFO	Strategus	execute	Collecting OMOP CDM Metadata 
+2025-12-15 13:52:51	[Main thread]	WARN	SqlRender	fun	Java library version does not match R package version! Please try reinstalling the SqlRender package.             Make sure to close all instances of R, and open only one instance before reinstalling. Also make sure your             R workspace is not reloaded on startup. Delete your .Rdata file if necessary
+2025-12-15 13:52:51	[Main thread]	INFO	DatabaseConnector	connectPostgreSql	Connecting using PostgreSQL driver
+2025-12-15 13:52:52	[Main thread]	INFO	Strategus	.message	EXECUTING: CohortGeneratorModule
+2025-12-15 13:52:53	[Main thread]	INFO	DatabaseConnector	connectPostgreSql	Connecting using PostgreSQL driver
+2025-12-15 13:52:53	[Main thread]	INFO	CohortGenerator	createCohortTables	Table "cohort_tbl_inclusion" already exists and in incremental mode, so not recreating it.
+2025-12-15 13:52:53	[Main thread]	INFO	CohortGenerator	createCohortTables	Table "cohort_tbl_inclusion_result" already exists and in incremental mode, so not recreating it.
+2025-12-15 13:52:53	[Main thread]	INFO	CohortGenerator	createCohortTables	Table "cohort_tbl_inclusion_stats" already exists and in incremental mode, so not recreating it.
+2025-12-15 13:52:53	[Main thread]	INFO	CohortGenerator	createCohortTables	Table "cohort_tbl_summary_stats" already exists and in incremental mode, so not recreating it.
+2025-12-15 13:52:53	[Main thread]	INFO	CohortGenerator	createCohortTables	Table "cohort_tbl_censor_stats" already exists and in incremental mode, so not recreating it.
+2025-12-15 13:52:53	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2025-12-15 13:52:53	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table cdm_5pct_9a0f90a32250497d9483c981ef1e1e70.cohort_tbl
+2025-12-15 13:52:53	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table cdm_5pct_9a0f90a32250497d9483c981ef1e1e70.cohort_tbl
+2025-12-15 13:52:53	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.14secs
+2025-12-15 13:52:53	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2025-12-15 13:52:53	[Main thread]	INFO	CohortGenerator	FUN	1/3- Generating cohort: celecoxib (id = 1)
+2025-12-15 13:52:54	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.816 secs
+2025-12-15 13:52:54	[Main thread]	INFO	CohortGenerator	FUN	2/3- Generating cohort: diclofenac (id = 2)
+2025-12-15 13:52:56	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.78 secs
+2025-12-15 13:52:56	[Main thread]	INFO	CohortGenerator	FUN	3/3- Generating cohort: GI Bleed (id = 3)
+2025-12-15 13:52:57	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 1.2 secs
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.128 secs
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	generateAndExportCohorts	Saving cohort generation information
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	generateAndExportCohorts	Saving cohort counts
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (0%) from cohortEntries because value below minimum 
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (0%) from cohortSubjects because value below minimum 
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	generateAndExportCohorts	Saving cohort statistics
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cs/survival_analysis_cohort_survival/results/synpuf_5pct/strategusOutput/CohortGeneratorModule/cg_cohort_inclusion.csv
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from cohort_tbl_inclusion
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from cohort_tbl_inclusion_result
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from cohort_tbl_inclusion_stats
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from cohort_tbl_inclusion_stats
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from cohort_tbl_summary_stats
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from cohort_tbl_censor_stats
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cs/survival_analysis_cohort_survival/results/synpuf_5pct/strategusOutput/CohortGeneratorModule/cg_cohort_inc_result.csv
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from person_count because value below minimum 
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cs/survival_analysis_cohort_survival/results/synpuf_5pct/strategusOutput/CohortGeneratorModule/cg_cohort_inc_stats.csv
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from person_count because value below minimum 
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from person_total because value below minimum 
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cs/survival_analysis_cohort_survival/results/synpuf_5pct/strategusOutput/CohortGeneratorModule/cg_cohort_summary_stats.csv
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from base_count because value below minimum 
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from final_count because value below minimum 
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cs/survival_analysis_cohort_survival/results/synpuf_5pct/strategusOutput/CohortGeneratorModule/cg_cohort_censor_stats.csv
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from lost_count because value below minimum 
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	generateAndExportCohorts	Saving cohort definition set
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	generateAndExportNegativeControls	Saving negative control outcome cohort definition
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	generateAndExportNegativeControls	Saving negative control outcome cohort counts
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from cohortEntries because value below minimum 
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	enforceMinCellValue	    censoring 0 values (NaN%) from cohortSubjects because value below minimum 
+2025-12-15 13:52:57	[Main thread]	INFO	CohortGenerator	runCohortGeneration	Cohort generation complete.
+2025-12-15 13:52:57	[Main thread]	INFO	Strategus	.message	Results available at: /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cs/survival_analysis_cohort_survival/results/synpuf_5pct/strategusOutput/CohortGeneratorModule
+2025-12-15 13:52:57	[Main thread]	INFO	Strategus	.message	EXECUTING: CohortSurvivalModule
+2025-12-15 13:53:15	[Main thread]	INFO	cli	cli_inform	[1m[22m- Getting survival for target cohort 'cohort_1' and outcome cohort 'cohort_3'
+2025-12-15 13:53:29	[Main thread]	INFO	cli	clii__message	Getting overall estimates[K
+2025-12-15 13:53:29	[Main thread]	INFO	cli	clii__message	[K
+2025-12-15 13:53:30	[Main thread]	INFO	cli	cli_inform	[1m[22m`eventgap`, `outcome_washout`, `censor_on_cohort_exit`, `follow_up_days`, and `minimum_survival_days` casted to character.
+2025-12-15 13:53:30	[Main thread]	INFO	Strategus	.message	Exporting data to csv files
+2025-12-15 13:53:30	[Main thread]	INFO	Strategus	.message	Successfully exported data to csv files
+2025-12-15 13:53:30	[Main thread]	INFO	Strategus	.message	Results available at: /Users/amit.sharma/Documents/Projects/strategus_projects/surv_analysis_cs/survival_analysis_cohort_survival/results/synpuf_5pct/strategusOutput/CohortSurvivalModule
+2025-12-15 13:53:30	[Main thread]	WARN	RPostgres	connection_release	Already disconnected
+2025-12-15 13:53:30	[Main thread]	INFO	cli	clii__message	 
+2025-12-15 13:53:30	[Main thread]	INFO	cli	clii__message	[36m──[39m [1mEXECUTION SUMMARY[22m [36m─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[39m 
+2025-12-15 13:53:30	[Main thread]	INFO	cli	clii__message	[32m✔[39m CohortGeneratorModule  (Execution Time: 5.72 secs) 
+2025-12-15 13:53:30	[Main thread]	INFO	cli	clii__message	[32m✔[39m CohortSurvivalModule  (Execution Time: 32.6 secs) 
