@@ -27,8 +27,9 @@ survivalModuleServer <- function(id, resultDatabaseSettings, connectionHandler) 
       res <- DatabaseConnector::querySql(
         conn,
         paste0(
-          "SELECT DISTINCT cdm_source_name AS database_id
-              from ", resultsDatabaseSchema, ".database_meta_data"
+          "SELECT DISTINCT cdm_name AS database_id
+              from ", resultsDatabaseSchema, ".cs_survival_results
+             WHERE cdm_name IS NOT NULL"
         )
       )
       return(res$database_id)
@@ -44,12 +45,13 @@ survivalModuleServer <- function(id, resultDatabaseSettings, connectionHandler) 
     output$km_plot <- renderPlot({
         req(input$dataset)  # Wait for dataset to be selected
         conn <- connectionHandler$getConnection()
+        sql_query <- paste0(
+            "SELECT * FROM ", resultsDatabaseSchema, ".cs_survival_results WHERE cdm_name = '", input$dataset, "' OR cdm_name IS NULL"
+        )
+        print(paste("Executing SQL query:\n", sql_query))
         cs_data <- DatabaseConnector::querySql(
             conn,
-            paste0(
-            "SELECT *
-                FROM ", resultsDatabaseSchema, ".cs_survival_results"
-            )
+            sql_query
             # paste0(
             #   "SELECT *
             #      FROM ", resultsDatabaseSchema, ".cs_survival_results
